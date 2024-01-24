@@ -33,6 +33,7 @@ public class ClearCounter : BaseCounter {
                 //player is not carrying anything
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
+            
         }
     }
 }
