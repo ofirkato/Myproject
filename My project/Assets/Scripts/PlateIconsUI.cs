@@ -30,7 +30,7 @@ public class PlateIconsUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (KitchenObjectSO kitchenObjectSO in plateKitchenObject.GetkitchenObjectSOList())
+        foreach (KitchenObjectSO kitchenObjectSO in plateKitchenObject.GetKitchenObjectSOList())
         {
             Transform iconTransform= Instantiate(iconTemplate, transform);
             iconTransform.gameObject.SetActive(true);  

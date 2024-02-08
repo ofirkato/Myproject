@@ -1559,6 +1559,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 644959154}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &652156976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652156978}
+  - component: {fileID: 652156977}
+  m_Layer: 0
+  m_Name: DeliveryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &652156977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652156976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad79dec63831ab45bc922e78c1e2ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeListSO: {fileID: 11400000, guid: 68d201e1eb17c4d47a60a2b73544290b, type: 2}
+--- !u!4 &652156978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652156976}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &683152506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7599197555046596463, guid: 8ebde2810ffc3ff4eaa5de5bd55f0dff,
@@ -3567,11 +3612,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
-  - {fileID: 832575519}
   - {fileID: 235750296}
+  - {fileID: 832575519}
   - {fileID: 1313109581}
   - {fileID: 179931669}
   - {fileID: 1164966083}
   - {fileID: 1158097411}
   - {fileID: 1370839320}
   - {fileID: 1732114697}
+  - {fileID: 652156978}

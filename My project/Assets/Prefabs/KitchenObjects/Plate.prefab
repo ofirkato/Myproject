@@ -280,12 +280,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kitchenObjectSO: {fileID: 11400000, guid: f8a45a6a923ce1645a8b1fecad670e79, type: 2}
-  validkitchenObjectSOList:
+  validKitchenObjectSOList:
   - {fileID: 11400000, guid: 78f059ac70d8b6f48a29986ceafa7043, type: 2}
   - {fileID: 11400000, guid: 96f7d593870f58346b0f84f47b362c5a, type: 2}
   - {fileID: 11400000, guid: 908d88d56908c234b898553ffc0e7c46, type: 2}
-  - {fileID: 11400000, guid: 8230af0ffb1ffdf4085fc5ae583e7d7e, type: 2}
   - {fileID: 11400000, guid: 1c7ab54bbe5562245bd77fcda3ba8a25, type: 2}
+  - {fileID: 11400000, guid: 8230af0ffb1ffdf4085fc5ae583e7d7e, type: 2}
   - {fileID: 11400000, guid: 0b5143c30aad85749b5e0111dfb4f73d, type: 2}
 --- !u!1 &5249972246368184946
 GameObject:

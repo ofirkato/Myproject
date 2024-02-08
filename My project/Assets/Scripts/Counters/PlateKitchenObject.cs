@@ -11,7 +11,7 @@ public class PlateKitchenObject : KitchenObject
         public KitchenObjectSO kitchenObjectSO;
     }
 
-    [SerializeField] private List<KitchenObjectSO> validkitchenObjectSOList;
+    [SerializeField] private List<KitchenObjectSO> validKitchenObjectSOList;
 
     private List<KitchenObjectSO> kitchenObjectSOList;
 
@@ -22,7 +22,7 @@ public class PlateKitchenObject : KitchenObject
 
     public bool TryAddIngredient(KitchenObjectSO kitchenObjectSO)
     {
-        if (!validkitchenObjectSOList.Contains(kitchenObjectSO))
+        if (!validKitchenObjectSOList.Contains(kitchenObjectSO))
         {
             //Not a vakid ingredient
             return false;
@@ -46,7 +46,7 @@ public class PlateKitchenObject : KitchenObject
          
     }
 
-    public List<KitchenObjectSO> GetkitchenObjectSOList()
+    public List<KitchenObjectSO> GetKitchenObjectSOList()
     {
         return kitchenObjectSOList;
     }
