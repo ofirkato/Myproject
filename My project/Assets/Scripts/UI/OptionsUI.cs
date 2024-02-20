@@ -25,7 +25,7 @@ public class OptionsUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI interactText;
     [SerializeField] private TextMeshProUGUI interactAlternateText;
     [SerializeField] private TextMeshProUGUI pauseText;
-    [SerializeField] private Transform pressToRebindKeyTransform;
+    [SerializeField] private Transform pressToRebindKeyTransform; 
 
 
 
@@ -37,10 +37,17 @@ public class OptionsUI : MonoBehaviour {
         {
             Hide();
         });
-        moveUpButton.onClick.AddListener(() =>{ RebindBinding(GameInput.Binding.Move_Up);});
+        moveUpButton.onClick.AddListener(() =>{RebindBinding(GameInput.Binding.Move_Up);});
+        moveDownButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.Move_Down); });
+        moveLeftButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.Move_Left); });
+        moveRightButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.Move_Right); });
+        interactButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.Interact); });
+        interactAlternateButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.InteractAlternate); });
+        pauseButton.onClick.AddListener(() => { RebindBinding(GameInput.Binding.Pause); });
+
     }
 
-   
+
     private void Start()
     {
         KitchenGameManager.Instance.OnGameUnPaused += KitchenGameManager_OnGameUnPaused;
@@ -60,13 +67,13 @@ public class OptionsUI : MonoBehaviour {
 
     private void UpdateVisual()
     {
-        moveUpText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Up);
-        moveDownText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Down);
-        moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
-        moveRightText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
-        interactText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact);
-        interactAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.InteractAlternate);
-        pauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Pause);
+          moveUpText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Up);
+          moveDownText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Down);
+          moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
+          moveRightText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
+          interactText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact);
+          interactAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.InteractAlternate);
+          pauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Pause);
 
     }
 
@@ -80,22 +87,23 @@ public class OptionsUI : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    private void ShowPressToRebindKey()
-    {
+      private void ShowPressToRebindKey()
+     {
         pressToRebindKeyTransform.gameObject.SetActive(true);
-    }
+     }
 
-    private void HidePressToRebindKey()
-    {
+      private void HidePressToRebindKey()
+     {
         pressToRebindKeyTransform.gameObject.SetActive(false);
-    }
+     }
 
-    private void RebindBinding(GameInput.Binding binding)
+      private void RebindBinding(GameInput.Binding binding)
     {
         ShowPressToRebindKey();
         GameInput.Instance.RebindBinding(binding,() => {
             HidePressToRebindKey();
             UpdateVisual();
             });
+
     }
 }
